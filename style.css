@@ -10,3 +10,7 @@ Text Domain: design_scuole_italia
 /** immagini e allineamenti wp **/
 /* =WordPress Core
 -------------------------------------------------------------- */
+.splide__slide{
+	margin-top:auto !important;
+	margin-bottom:auto !important;
+}
