@@ -334,7 +334,8 @@ function breadcrumb_fix( $string, $arg1 ) {
 		$string = str_replace("Schede Didattiche", "Le schede didattiche",$string);
 		$string = str_replace("Tutti i Servizi", "Tutti i servizi",$string);		
 		$string = str_replace("La Storia", "La storia",$string);
-
+		$string = str_replace("Le circolari", "Circolari",$string);
+	
     return $string;
 }
 add_filter( 'breadcrumb_trail', 'breadcrumb_fix', 10, 3);
@@ -495,3 +496,14 @@ function dsi_login_redirect( $redirect_to, $request, $user ) {
 }
 
 add_filter( 'login_redirect', 'dsi_login_redirect', 10, 3 );
+
+// CUSTOM!!!
+function register_my_session()             
+{                                          
+if (!session_id()) {                   
+	session_start();                   
+}                                      
+}                                          
+									   
+add_action('init', 'register_my_session'); 
+

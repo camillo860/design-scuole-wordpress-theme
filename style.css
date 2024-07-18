@@ -14,3 +14,10 @@ Text Domain: design_scuole_italia
 	margin-top:auto !important;
 	margin-bottom:auto !important;
 }
+
+.banner img
+{
+    width:355px ;
+    height:150px;
+
+}
